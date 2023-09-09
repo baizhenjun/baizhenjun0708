@@ -16,7 +16,6 @@ class JavaSpringbootApplicationTests {
 	void contextLoads() {
 		List<User> list = userService.list();
 		System.out.println("list = " + list);
-		
 	}
 
 }

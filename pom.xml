@@ -88,6 +88,11 @@
 			<artifactId>shiro-spring</artifactId>
 			<version>1.11.0</version>
 		</dependency>
+<!--		主要用于快速创建集合：Lists-->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
