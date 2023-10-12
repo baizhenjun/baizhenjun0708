@@ -1,3 +1,9 @@
 spring:
   profiles:
      active: dev
+
+audit: # 文件上传路径前缀 audit.upload.file.path.prefix
+  upload:
+    file:
+      path:
+        prefix: /data/audit
