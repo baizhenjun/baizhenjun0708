@@ -29,7 +29,7 @@ public class CodeGeneration {
 
 
         DataSourceConfig dsc = new DataSourceConfig.Builder(
-                "jdbc:mysql://localhost:3306/baizhenjun?&useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai",
+                "jdbc:mysql://localhost:3306/audit?&useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai",
                 "root",
                 "root")
                 .dbQuery(mySqlQuery).build();
@@ -55,13 +55,13 @@ public class CodeGeneration {
          * 包配置
          */
         PackageConfig packages = new PackageConfig.Builder()
-                .entity("entity.test")//实体类包名
+                .entity("entity")//实体类包名
                 .parent("com.example.java_springboot")//父包名。如果为空，将下面子包名必须写全部， 否则就只需写子包名
-                .controller("controller.test")//控制层包名
-                .mapper("mapper.test")//mapper层包名
+                .controller("controller")//控制层包名
+                .mapper("mapper")//mapper层包名
                 .xml("mapper.xml")//数据访问层xml包名
-                .service("service.test")//service层包名
-                .serviceImpl("service.impl.test")//service实现类包名
+                .service("service")//service层包名
+                .serviceImpl("service.impl")//service实现类包名
                 .other("output")//输出自定义文件时的包名
                 .pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectPath + "/src/main/resources/mapper")) //路径配置信息,就是配置各个文件模板的路径信息,这里以mapper.xml为例
                 .build();
@@ -105,7 +105,7 @@ public class CodeGeneration {
         StrategyConfig strategyConfig = new StrategyConfig.Builder()
                 .enableCapitalMode()//开启全局大写命名
                 //.likeTable()模糊表匹配
-                .addInclude("user")//添加表匹配，指定要生成的数据表名，不写默认选定数据库所有表
+                .addInclude("sn_audit_base_institution_manage")//添加表匹配，指定要生成的数据表名，不写默认选定数据库所有表
                 //.disableSqlFilter()禁用sql过滤:默认(不使用该方法）true
                 //.enableSchema()启用schema:默认false
                 .entityBuilder() //实体策略配置
