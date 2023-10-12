@@ -1,6 +1,6 @@
 package com.example.java_springboot;
 
-import com.example.java_springboot.entity.User;
+import com.example.java_springboot.entity.user.User;
 import com.example.java_springboot.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
